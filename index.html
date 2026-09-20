@@ -6,7 +6,7 @@
 <title>Mindspace — Brain Dump. Your mind, visualized.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=Nunito+Sans:wght@600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Plus+Jakarta+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=Nunito+Sans:wght@600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
@@ -29,7 +29,6 @@ tailwind.config = {
       },
       fontFamily: {
         louize: ['"Instrument Serif"', '"Playfair Display"', 'serif'],
-        louizeItalic: ['"Instrument Serif"', 'serif'],
         nunito: ['"Nunito Sans"', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
       }
@@ -41,7 +40,6 @@ tailwind.config = {
   * { font-family: 'Inter', system-ui, sans-serif; }
   .font-louize { font-family: 'Instrument Serif', 'Playfair Display', serif; letter-spacing: -0.04em; }
   .font-louize-italic { font-family: 'Instrument Serif', serif; font-style: italic; letter-spacing: -0.03em; }
-  .tracking-nunito { letter-spacing: 0.125em; }
   .hero-bloom {
     background:
       radial-gradient(ellipse 900px 600px at 50% -5%, rgba(255,89,36,0.18) 0%, rgba(255,120,60,0.12) 18%, rgba(255,200,180,0.08) 32%, transparent 60%),
@@ -62,411 +60,165 @@ tailwind.config = {
     color: #ff5924;
     transition: all 0.2s ease;
   }
-  .pill-button:hover {
-    background: #ff5924;
-    color: white;
-    transform: translateY(-1px);
-    box-shadow: 0 8px 24px rgba(255,89,36,0.25);
-  }
-  .pill-button-filled {
-    border-radius: 100px;
-    background: #111111;
-    color: white;
-    border: 1.5px solid #111111;
-  }
-  .pill-button-filled:hover {
-    background: #000;
-    transform: translateY(-1px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-  }
-  .feature-card {
-    border-radius: 16px;
-    padding: 40px;
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  .feature-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.06);
-  }
-  .hero-card {
-    background: white;
-    border-radius: 16px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 20px 60px rgba(0,0,0,0.08), 0 0 0 1px rgba(0,0,0,0.04);
-    position: relative;
-  }
-  .hero-card::after {
-    content: '';
-    position: absolute;
-    inset: -1px;
-    border-radius: 16px;
-    padding: 1px;
-    background: linear-gradient(135deg, rgba(255,89,36,0.15), transparent 40%);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    pointer-events: none;
-  }
-  .warm-shadow {
-    box-shadow: 0 24px 48px rgba(255,89,36,0.12), 0 12px 24px rgba(255,89,36,0.08), 0 0 0 1px rgba(0,0,0,0.04);
-  }
-  .dot-ember {
-    width: 6px;
-    height: 6px;
-    background: #ff5924;
-    border-radius: 50%;
-    display: inline-block;
-  }
-  .eyebrow {
-    font-family: 'Nunito Sans', sans-serif;
-    font-weight: 700;
-    font-size: 11px;
-    letter-spacing: 0.125em;
-    text-transform: uppercase;
-    color: #ff5924;
-  }
-  .node {
-    position: absolute;
-    background: white;
-    border-radius: 12px;
-    padding: 12px 16px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08), 0 0 0 1px rgba(0,0,0,0.04);
-    font-size: 13px;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    white-space: nowrap;
-    transition: all 0.3s ease;
-  }
-  .node:hover {
-    transform: scale(1.05) translateY(-2px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.04);
-    z-index: 10;
-  }
-  .canvas-grid {
-    background-image:
-      linear-gradient(rgba(0,0,0,0.02) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px);
-    background-size: 32px 32px;
-  }
+  .pill-button:hover { background: #ff5924; color: white; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(255,89,36,0.25); }
+  .pill-button-filled { border-radius: 100px; background: #111111; color: white; border: 1.5px solid #111111; }
+  .pill-button-filled:hover { background: #000; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
+  .feature-card { border-radius: 16px; padding: 40px; position: relative; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .feature-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.06); }
+  .hero-card { background: white; border-radius: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 20px 60px rgba(0,0,0,0.08), 0 0 0 1px rgba(0,0,0,0.04); position: relative; }
+  .hero-card::after { content: ''; position: absolute; inset: -1px; border-radius: 16px; padding: 1px; background: linear-gradient(135deg, rgba(255,89,36,0.15), transparent 40%); -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none; }
+  .warm-shadow { box-shadow: 0 24px 48px rgba(255,89,36,0.12), 0 12px 24px rgba(255,89,36,0.08), 0 0 0 1px rgba(0,0,0,0.04); }
+  .dot-ember { width: 6px; height: 6px; background: #ff5924; border-radius: 50%; display: inline-block; }
+  .eyebrow { font-family: 'Nunito Sans', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.125em; text-transform: uppercase; color: #ff5924; }
+  .node { position: absolute; background: white; border-radius: 12px; padding: 12px 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.08), 0 0 0 1px rgba(0,0,0,0.04); font-size: 13px; font-weight: 500; display: flex; align-items: center; gap: 8px; white-space: nowrap; transition: all 0.3s ease; }
+  .node:hover { transform: scale(1.05) translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.04); z-index: 10; }
+  .canvas-grid { background-image: linear-gradient(rgba(0,0,0,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px); background-size: 32px 32px; }
+  details[open] summary .faq-icon { transform: rotate(45deg); }
 </style>
 </head>
 <body class="bg-canvas text-ink antialiased selection:bg-ember/20">
 
 <!-- Navigation -->
-<nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-[720px]">
-  <div class="nav-pill px-6 py-3 flex items-center justify-between">
-    <div class="flex items-center gap-8">
+<nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-[760px]">
+  <div class="nav-pill px-5 py-3 flex items-center justify-between">
+    <div class="flex items-center gap-7">
       <a href="#" class="flex items-center gap-2.5">
-        <span class="w-7 h-7 rounded-full bg-[#111] flex items-center justify-center">
-          <span class="w-2 h-2 rounded-full bg-ember"></span>
-        </span>
+        <span class="w-7 h-7 rounded-full bg-[#111] flex items-center justify-center"><span class="w-2 h-2 rounded-full bg-ember"></span></span>
         <span class="font-semibold text-[15px] tracking-[-0.02em]">Mindspace</span>
       </a>
-      <div class="hidden md:flex items-center gap-6 text-[13.5px] font-medium text-[#24272d]">
+      <div class="hidden md:flex items-center gap-5 text-[13px] font-medium text-[#24272d]">
         <a href="#product" class="flex items-center gap-1.5 hover:text-ink transition-colors"><span class="dot-ember"></span>Product</a>
-        <a href="#canvas" class="flex items-center gap-1.5 hover:text-ink transition-colors"><span class="dot-ember opacity-0"></span>Canvas</a>
-        <a href="#pricing" class="flex items-center gap-1.5 hover:text-ink transition-colors"><span class="dot-ember opacity-0"></span>Pricing</a>
+        <a href="#canvas" class="hover:text-ink transition-colors">Canvas</a>
+        <a href="#about" class="hover:text-ink transition-colors">About</a>
+        <a href="#faq" class="hover:text-ink transition-colors">FAQ</a>
+        <a href="#pricing" class="hover:text-ink transition-colors">Pricing</a>
       </div>
     </div>
-    <div class="flex items-center gap-3">
-      <a href="#" class="hidden sm:inline-flex text-[13.5px] font-medium text-[#24272d] hover:text-ink px-4 py-2">Sign in</a>
-      <a href="#cta" class="pill-button-filled px-5 py-2.5 text-[13.5px] font-semibold inline-flex items-center gap-2">
-        Start Brain Dumping
-        <span class="w-5 h-5 rounded-full bg-white/15 flex items-center justify-center">→</span>
-      </a>
+    <div class="flex items-center gap-2">
+      <a href="#" class="hidden sm:inline-flex text-[13px] font-medium text-[#24272d] hover:text-ink px-3 py-2">Sign in</a>
+      <a href="#cta" class="pill-button-filled px-5 py-2.5 text-[13px] font-semibold inline-flex items-center gap-2">Start Brain Dumping <span class="w-5 h-5 rounded-full bg-white/15 flex items-center justify-center text-xs">→</span></a>
     </div>
   </div>
 </nav>
 
 <!-- Hero -->
-<section class="hero-bloom pt-[140px] pb-16 md:pb-24 overflow-hidden">
+<section class="hero-bloom pt-[140px] pb-16 md:pb-20 overflow-hidden">
   <div class="max-w-[1440px] mx-auto px-6 md:px-10">
-    <!-- Eyebrow -->
     <div class="flex justify-center mb-6">
       <span class="eyebrow inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-black/5 shadow-sm">
-        <span class="dot-ember"></span>
-        Innovative Tech Startup • From Munich to the world
+        <span class="dot-ember"></span> For everyone with a busy mind • Private by design
       </span>
     </div>
-
-    <!-- Headline -->
     <div class="text-center max-w-[980px] mx-auto">
       <h1 class="font-louize text-[48px] md:text-[84px] lg:text-[104px] leading-[0.88] tracking-[-0.052em] font-normal text-[#111]">
-        Dump your brain.<br>
-        <span class="font-louize-italic font-normal text-[#ff5924]">Connect</span> the dots.
+        Dump your brain.<br><span class="font-louize-italic font-normal text-[#ff5924]">Connect</span> the dots.
       </h1>
-      <p class="mt-6 md:mt-8 text-[17px] md:text-[19px] leading-[1.6] text-[#4a5465] max-w-[620px] mx-auto font-[400]">
-        Brain Dump is the infinite canvas where stray thoughts become linked ideas, and linked ideas become shipped projects. Capture anything — auto-organized, visually connected.
+      <p class="mt-6 md:mt-8 text-[17px] md:text-[19px] leading-[1.6] text-[#4a5465] max-w-[640px] mx-auto">
+        Brain Dump is the <span class="font-semibold text-[#3a475a]">simple private place</span> for any stray thought — grocery lists to startup roadmaps. Capture anything, auto-organized and visually connected. No folders, no fuss.
       </p>
-
-      <!-- CTA pills -->
       <div class="mt-8 md:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
-        <a href="#canvas" class="pill-button px-7 py-3.5 text-[14px] font-semibold inline-flex items-center gap-2 bg-white">
-          <span class="dot-ember"></span>
-          Try Brain Dump free
-        </a>
-        <a href="#" class="inline-flex items-center gap-2 text-[14px] font-medium text-[#3a475a] hover:text-ink px-6 py-3.5">
-          <span class="w-8 h-8 rounded-full bg-white border border-black/5 flex items-center justify-center shadow-sm">▶</span>
-          See 60s demo
-        </a>
+        <a href="#canvas" class="pill-button px-7 py-3.5 text-[14px] font-semibold inline-flex items-center gap-2 bg-white"><span class="dot-ember"></span> Try Brain Dump free</a>
+        <a href="#" class="inline-flex items-center gap-2 text-[14px] font-medium text-[#3a475a] hover:text-ink px-6 py-3.5"><span class="w-8 h-8 rounded-full bg-white border border-black/5 flex items-center justify-center shadow-sm">▶</span> See 60s demo</a>
       </div>
-      <p class="mt-4 text-[13px] text-[#717286]">No credit card • Private by design • Available on Mac, iOS & Web</p>
+      <p class="mt-4 text-[13px] text-[#717286]">No credit card • For everyone • Mac, iOS, Android & Web</p>
     </div>
 
-    <!-- Hero Visual - The Canvas -->
+    <!-- Hero Visual -->
     <div class="mt-12 md:mt-16 relative max-w-[1120px] mx-auto">
-      <!-- Glow behind -->
       <div class="absolute inset-0 -z-10 bg-gradient-to-b from-ember/10 via-transparent to-transparent blur-3xl rounded-[40px]"></div>
-
       <div class="hero-card warm-shadow overflow-hidden">
-        <!-- Toolbar -->
         <div class="h-[52px] border-b border-black/[0.06] bg-[#fcfcfc] flex items-center justify-between px-4 md:px-6">
           <div class="flex items-center gap-3">
-            <div class="flex gap-1.5">
-              <span class="w-3 h-3 rounded-full bg-[#ff5f57]"></span>
-              <span class="w-3 h-3 rounded-full bg-[#ffbd2e]"></span>
-              <span class="w-3 h-3 rounded-full bg-[#28c840]"></span>
-            </div>
-            <div class="hidden md:flex items-center gap-2 ml-4 text-[12px] font-medium text-[#717286]">
-              <span class="px-2.5 py-1 rounded-full bg-white border border-black/5">Brain Dump — Q4 Roadmap</span>
-              <span class="w-1 h-1 rounded-full bg-black/10"></span>
-              <span>Auto-saved • Private</span>
-            </div>
+            <div class="flex gap-1.5"><span class="w-3 h-3 rounded-full bg-[#ff5f57]"></span><span class="w-3 h-3 rounded-full bg-[#ffbd2e]"></span><span class="w-3 h-3 rounded-full bg-[#28c840]"></span></div>
+            <div class="hidden md:flex items-center gap-2 ml-4 text-[12px] font-medium text-[#717286]"><span class="px-2.5 py-1 rounded-full bg-white border border-black/5">Brain Dump — My Day</span><span class="w-1 h-1 rounded-full bg-black/10"></span><span>Auto-saved • Private</span></div>
           </div>
           <div class="flex items-center gap-2">
-            <span class="hidden md:inline-flex items-center gap-1.5 text-[12px] font-medium text-[#4a5465] px-3 py-1.5 rounded-full bg-white border border-black/5">
-              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-              3 collaborators
-            </span>
+            <span class="hidden md:inline-flex items-center gap-1.5 text-[12px] font-medium text-[#4a5465] px-3 py-1.5 rounded-full bg-white border border-black/5"><span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Auto-organized</span>
             <button class="w-8 h-8 rounded-full bg-ember text-white flex items-center justify-center text-sm">＋</button>
           </div>
         </div>
-
-        <!-- Canvas Area -->
         <div class="relative h-[420px] md:h-[520px] bg-[#fcf9f7] canvas-grid overflow-hidden">
-          <!-- SVG Connections -->
           <svg class="absolute inset-0 w-full h-full pointer-events-none" style="z-index:1">
-            <defs>
-              <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stop-color="#ff5924" stop-opacity="0.25"/>
-                <stop offset="100%" stop-color="#ff5924" stop-opacity="0.08"/>
-              </linearGradient>
-            </defs>
-            <!-- Center to nodes -->
             <path d="M 560 260 C 480 200, 380 160, 300 140" stroke="#ff5924" stroke-width="1.5" stroke-dasharray="6 6" fill="none" opacity="0.35"/>
             <path d="M 560 260 C 620 180, 700 140, 780 120" stroke="#ff5924" stroke-width="1.5" fill="none" opacity="0.25"/>
             <path d="M 560 260 C 500 340, 420 380, 280 360" stroke="#ff5924" stroke-width="1.5" fill="none" opacity="0.25"/>
             <path d="M 560 260 C 640 320, 720 300, 820 260" stroke="#ff5924" stroke-width="1.5" stroke-dasharray="6 6" fill="none" opacity="0.3"/>
             <path d="M 560 260 C 520 180, 540 100, 580 80" stroke="#ff5924" stroke-width="1" fill="none" opacity="0.18"/>
-            <path d="M 300 140 C 340 100, 420 80, 580 80" stroke="black" stroke-width="1" fill="none" opacity="0.08"/>
-            <path d="M 280 360 C 360 400, 480 420, 620 380" stroke="black" stroke-width="1" fill="none" opacity="0.06"/>
           </svg>
-
-          <!-- Central Node -->
           <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
             <div class="bg-[#111] text-white rounded-[16px] px-6 py-5 shadow-[0_16px_40px_rgba(0,0,0,0.18)] min-w-[220px] text-center border border-white/10">
               <div class="w-8 h-8 rounded-full bg-ember mx-auto flex items-center justify-center mb-3">◆</div>
               <div class="text-[13px] font-semibold tracking-wide">BRAIN DUMP</div>
-              <div class="text-[11px] text-white/60 mt-1 font-medium">Mindspace • 47 nodes • 12 projects</div>
-              <div class="mt-3 flex items-center justify-center gap-1.5">
-                <span class="w-1.5 h-1.5 rounded-full bg-ember animate-pulse"></span>
-                <span class="text-[11px] text-white/80">Live • Auto-organized</span>
-              </div>
+              <div class="text-[11px] text-white/60 mt-1">Mindspace • 47 nodes • for everyone</div>
+              <div class="mt-3 flex items-center justify-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-ember animate-pulse"></span><span class="text-[11px] text-white/80">Live • Auto-organized</span></div>
             </div>
           </div>
-
-          <!-- Floating Nodes -->
-          <div class="node" style="left: 6%; top: 14%; z-index: 5;">
-            <span class="w-7 h-7 rounded-full bg-slateBlue flex items-center justify-center text-[14px]">💡</span>
-            <div>
-              <div class="text-[12px] font-semibold leading-none">App Idea: MindCanvas</div>
-              <div class="text-[11px] text-[#717286]">idea • 2 days ago</div>
-            </div>
-            <span class="w-2 h-2 rounded-full bg-ember/60 ml-2"></span>
-          </div>
-
-          <div class="node" style="right: 6%; top: 10%; z-index: 5; background: #f3f0e7;">
-            <span class="w-7 h-7 rounded-full bg-white border border-black/5 flex items-center justify-center text-[14px]">📸</span>
-            <div>
-              <div class="text-[12px] font-semibold leading-none">Ref: brutalist archive</div>
-              <div class="text-[11px] text-[#717286]">inspiration • image</div>
-            </div>
-          </div>
-
-          <div class="node" style="left: 4%; bottom: 18%; z-index: 5; background: #dde9d3;">
-            <span class="w-7 h-7 rounded-full bg-white flex items-center justify-center text-[12px]">✓</span>
-            <div>
-              <div class="text-[12px] font-semibold leading-none">Q4 Launch Checklist</div>
-              <div class="text-[11px] text-[#717286]">project • 8 tasks</div>
-            </div>
-            <span class="px-1.5 py-0.5 rounded-full bg-[#111] text-white text-[10px] ml-2">3 done</span>
-          </div>
-
-          <div class="node" style="right: 4%; top: 42%; z-index: 5;">
-            <span class="w-7 h-7 rounded-full bg-[#fff1f1] flex items-center justify-center text-[13px]">🔗</span>
-            <div>
-              <div class="text-[12px] font-semibold leading-none">Research: tools for thought</div>
-              <div class="text-[11px] text-[#717286]">12 notes • linked</div>
-            </div>
-          </div>
-
-          <div class="node hidden md:flex" style="left: 28%; top: 7%; z-index: 4; background: white; opacity: 0.95;">
-            <span class="w-6 h-6 rounded-full bg-slateBlue flex items-center justify-center text-[11px]">✎</span>
-            <div class="text-[11px] font-medium">Morning pages • today</div>
-          </div>
-
-          <div class="node hidden md:flex" style="right: 18%; bottom: 12%; z-index: 4; background: #f3f0e7;">
-            <span class="w-6 h-6 rounded-full bg-white flex items-center justify-center text-[11px]">●</span>
-            <div class="text-[11px] font-medium">Meeting notes → Action items</div>
-          </div>
-
-          <!-- Bottom bar -->
+          <div class="node" style="left: 6%; top: 14%;"><span class="w-7 h-7 rounded-full bg-slateBlue flex items-center justify-center">💡</span><div><div class="text-[12px] font-semibold leading-none">Gift idea for Mama</div><div class="text-[11px] text-[#717286]">thought • today</div></div><span class="w-2 h-2 rounded-full bg-ember/60 ml-2"></span></div>
+          <div class="node" style="right: 6%; top: 10%; background: #f3f0e7;"><span class="w-7 h-7 rounded-full bg-white border border-black/5 flex items-center justify-center">📸</span><div><div class="text-[12px] font-semibold leading-none">Kitchen inspo</div><div class="text-[11px] text-[#717286]">image • saved</div></div></div>
+          <div class="node" style="left: 4%; bottom: 18%; background: #dde9d3;"><span class="w-7 h-7 rounded-full bg-white flex items-center justify-center text-[12px]">✓</span><div><div class="text-[12px] font-semibold leading-none">Weekend trip • Munich</div><div class="text-[11px] text-[#717286]">project • 5 items</div></div><span class="px-1.5 py-0.5 rounded-full bg-[#111] text-white text-[10px] ml-2">2 done</span></div>
+          <div class="node" style="right: 4%; top: 42%;"><span class="w-7 h-7 rounded-full bg-[#fff1f1] flex items-center justify-center">🔗</span><div><div class="text-[12px] font-semibold leading-none">Reading list</div><div class="text-[11px] text-[#717286]">12 notes • linked</div></div></div>
+          <div class="node hidden md:flex" style="left: 28%; top: 7%; background: white;"><span class="w-6 h-6 rounded-full bg-slateBlue flex items-center justify-center text-[11px]">✎</span><div class="text-[11px] font-medium">Morning pages</div></div>
+          <div class="node hidden md:flex" style="right: 18%; bottom: 12%; background: #f3f0e7;"><span class="w-6 h-6 rounded-full bg-white flex items-center justify-center text-[11px]">●</span><div class="text-[11px] font-medium">Shopping → Recipes</div></div>
           <div class="absolute bottom-0 left-0 right-0 h-[44px] bg-white border-t border-black/5 flex items-center justify-between px-4 z-30">
-            <div class="flex items-center gap-2 text-[12px] text-[#717286]">
-              <span class="hidden md:inline-flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-[#dde9d3]"></span> Thoughts</span>
-              <span class="hidden md:inline-flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-slateBlue"></span> Ideas</span>
-              <span class="hidden md:inline-flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-[#f3f0e7]"></span> Projects</span>
-              <span class="md:hidden">47 nodes • Drag to connect →</span>
-            </div>
-            <div class="flex items-center gap-2">
-              <span class="text-[12px] text-[#717286] hidden md:inline">Zoom 85%</span>
-              <div class="flex rounded-full bg-[#f9fafc] border border-black/5 p-1">
-                <button class="w-6 h-6 rounded-full bg-white shadow-sm border border-black/5 flex items-center justify-center text-[12px]">−</button>
-                <button class="w-6 h-6 rounded-full flex items-center justify-center text-[12px]">＋</button>
-              </div>
-            </div>
+            <div class="flex items-center gap-2 text-[12px] text-[#717286]"><span class="hidden md:inline-flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-[#dde9d3]"></span> Thoughts</span><span class="hidden md:inline-flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-slateBlue"></span> Ideas</span><span class="hidden md:inline-flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-[#f3f0e7]"></span> Projects</span><span class="md:hidden">47 nodes • Drag to connect →</span></div>
+            <div class="flex items-center gap-2"><span class="text-[12px] text-[#717286] hidden md:inline">Zoom 85%</span><div class="flex rounded-full bg-[#f9fafc] border border-black/5 p-1"><button class="w-6 h-6 rounded-full bg-white shadow-sm border border-black/5 flex items-center justify-center text-[12px]">−</button><button class="w-6 h-6 rounded-full flex items-center justify-center text-[12px]">＋</button></div></div>
           </div>
         </div>
       </div>
-
-      <!-- Floating stats -->
-      <div class="hidden lg:flex absolute -right-6 top-16 bg-white rounded-[12px] p-4 shadow-[0_8px_24px_rgba(0,0,0,0.08)] border border-black/5 items-center gap-3 rotate-[1.2deg]">
-        <div class="w-10 h-10 rounded-full bg-[#dde9d3] flex items-center justify-center">⚡</div>
-        <div>
-          <div class="text-[13px] font-semibold leading-none">Capture in 0.4s</div>
-          <div class="text-[11px] text-[#717286]">Any thought, any format</div>
-        </div>
-      </div>
-      <div class="hidden lg:flex absolute -left-8 bottom-28 bg-white rounded-[12px] p-4 shadow-[0_8px_24px_rgba(0,0,0,0.08)] border border-black/5 items-center gap-3 -rotate-[1deg]">
-        <div class="w-10 h-10 rounded-full bg-slateBlue flex items-center justify-center">✦</div>
-        <div>
-          <div class="text-[13px] font-semibold leading-none">Auto-linked</div>
-          <div class="text-[11px] text-[#717286]">We find the connections</div>
-        </div>
-      </div>
+      <div class="hidden lg:flex absolute -right-6 top-16 bg-white rounded-[12px] p-4 shadow-[0_8px_24px_rgba(0,0,0,0.08)] border border-black/5 items-center gap-3 rotate-[1.2deg]"><div class="w-10 h-10 rounded-full bg-[#dde9d3] flex items-center justify-center">⚡</div><div><div class="text-[13px] font-semibold leading-none">Capture in 0.4s</div><div class="text-[11px] text-[#717286]">Any thought, any format</div></div></div>
+      <div class="hidden lg:flex absolute -left-8 bottom-28 bg-white rounded-[12px] p-4 shadow-[0_8px_24px_rgba(0,0,0,0.08)] border border-black/5 items-center gap-3 -rotate-[1deg]"><div class="w-10 h-10 rounded-full bg-slateBlue flex items-center justify-center">✦</div><div><div class="text-[13px] font-semibold leading-none">Auto-linked</div><div class="text-[11px] text-[#717286]">We find the connections</div></div></div>
     </div>
-
-    <!-- Social proof -->
-    <div class="mt-12 md:mt-16 flex flex-col items-center gap-4">
-      <p class="text-[12px] font-semibold tracking-[0.08em] uppercase text-[#afb5c1]">Trusted by thinkers at</p>
+    <div class="mt-12 flex flex-col items-center gap-4">
+      <p class="text-[12px] font-semibold tracking-[0.08em] uppercase text-[#afb5c1]">Loved by everyday thinkers</p>
       <div class="flex flex-wrap items-center justify-center gap-6 md:gap-10 opacity-60 grayscale">
-        <span class="font-semibold text-[14px] tracking-tight text-[#24272d]">LINEAR</span>
-        <span class="font-serif italic text-[16px] text-[#24272d]">Heptabase</span>
-        <span class="font-bold text-[13px] tracking-widest text-[#24272d]">SUPER</span>
-        <span class="text-[14px] font-medium text-[#24272d]">mymind</span>
-        <span class="text-[13px] font-semibold text-[#24272d]">Raycast</span>
+        <span class="font-semibold text-[13px] text-[#24272d]">4.9/5 on App Store</span><span class="text-[13px] text-[#24272d]">12,000+ dumps/day</span><span class="text-[13px] text-[#24272d]">Private • No ads</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Feature Cards - The mymind pastel system -->
+<!-- Feature Cards -->
 <section id="product" class="py-16 md:py-24 bg-white">
   <div class="max-w-[1440px] mx-auto px-6 md:px-10">
     <div class="max-w-[720px] mx-auto text-center mb-12 md:mb-16">
       <div class="eyebrow mb-4 justify-center flex">• How Brain Dump works</div>
-      <h2 class="font-louize text-[38px] md:text-[64px] leading-[0.92] tracking-[-0.04em] text-[#111]">
-        Remember everything.<br>
-        <span class="font-louize-italic text-[#717286] font-normal">Organize nothing.</span>
-      </h2>
-      <p class="mt-5 text-[16px] leading-[1.6] text-[#4a5465] max-w-[560px] mx-auto">
-        Most tools force you to file before you think. Brain Dump reverses it: dump first, we organize by meaning, color, and connection — like mymind for thinkers who ship.
-      </p>
+      <h2 class="font-louize text-[38px] md:text-[64px] leading-[0.92] tracking-[-0.04em] text-[#111]">Remember everything.<br><span class="font-louize-italic text-[#717286] font-normal">Organize nothing.</span></h2>
+      <p class="mt-5 text-[16px] leading-[1.6] text-[#4a5465] max-w-[560px] mx-auto">Most tools force you to file before you think. Brain Dump reverses it: dump first, we organize by meaning, color, and connection — whether it’s a grocery list or a thesis.</p>
     </div>
-
     <div class="grid md:grid-cols-3 gap-5 md:gap-6 max-w-[1200px] mx-auto">
-      <!-- Slate Blue Card -->
       <div class="feature-card bg-slateBlue">
         <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center mb-6 shadow-sm">◈</div>
         <div class="eyebrow !text-[#3a475a] mb-3">01 • Capture</div>
-        <h3 class="font-louize text-[24px] leading-[1.1] tracking-[-0.02em] text-[#111] mb-3">Drop anything.<br>We’ll sort it.</h3>
-        <p class="text-[14px] leading-[1.6] text-[#3a475a] mb-6">
-          Text, links, images, PDFs, voice memos. One shortcut (⌘ J) → Brain Dump. AI tags by type, topic, and project automatically. No folders. No friction.
-        </p>
+        <h3 class="font-louize text-[24px] leading-[1.1] tracking-[-0.02em] mb-3">Drop anything.<br>We’ll sort it.</h3>
+        <p class="text-[14px] leading-[1.6] text-[#3a475a] mb-6">Text, links, images, PDFs, voice memos. One shortcut (⌘ J) → Brain Dump. AI tags by type & topic. No folders. No friction.</p>
         <div class="space-y-2.5">
-          <div class="bg-white rounded-full px-3 py-2 flex items-center gap-2 text-[12px] font-medium shadow-sm border border-black/5">
-            <span class="w-6 h-6 rounded-full bg-slateBlue flex items-center justify-center text-[10px]">↗</span>
-            stakeholder-interview-notes.pdf
-            <span class="ml-auto w-2 h-2 rounded-full bg-ember"></span>
-          </div>
-          <div class="bg-white/70 rounded-full px-3 py-2 flex items-center gap-2 text-[12px] font-medium">
-            <span class="w-6 h-6 rounded-full bg-white flex items-center justify-center text-[10px]">◎</span>
-            https://are.na/moodboard
-            <span class="ml-auto text-[11px] text-[#717286]">#inspo</span>
-          </div>
+          <div class="bg-white rounded-full px-3 py-2 flex items-center gap-2 text-[12px] font-medium shadow-sm border border-black/5"><span class="w-6 h-6 rounded-full bg-slateBlue flex items-center justify-center text-[10px]">↗</span> birthday-ideas.txt <span class="ml-auto w-2 h-2 rounded-full bg-ember"></span></div>
+          <div class="bg-white/70 rounded-full px-3 py-2 flex items-center gap-2 text-[12px] font-medium"><span class="w-6 h-6 rounded-full bg-white flex items-center justify-center text-[10px]">◎</span> https://are.na/moodboard <span class="ml-auto text-[11px] text-[#717286]">#inspo</span></div>
         </div>
       </div>
-
-      <!-- Parchment Card -->
       <div class="feature-card bg-parchment">
         <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center mb-6 shadow-sm">⬡</div>
         <div class="eyebrow !text-[#3a475a] mb-3">02 • Connect</div>
-        <h3 class="font-louize text-[24px] leading-[1.1] tracking-[-0.02em] text-[#111] mb-3">See your thinking<br>as a map.</h3>
-        <p class="text-[14px] leading-[1.6] text-[#3a475a] mb-6">
-          Every note is a node. Drag to link, pinch to zoom, follow the ember thread. The canvas reveals patterns you missed — the mind’s second layer.
-        </p>
+        <h3 class="font-louize text-[24px] leading-[1.1] tracking-[-0.02em] mb-3">See your thinking<br>as a map.</h3>
+        <p class="text-[14px] leading-[1.6] text-[#3a475a] mb-6">Every note is a node. Drag to link, pinch to zoom, follow the ember thread. The canvas reveals patterns you missed.</p>
         <div class="bg-white rounded-[12px] p-3 shadow-sm border border-black/5">
-          <div class="flex items-center justify-between mb-3">
-            <span class="text-[11px] font-semibold tracking-widest uppercase text-[#717286]">Connections</span>
-            <span class="text-[11px] font-medium px-2 py-1 rounded-full bg-[#111] text-white">12 new</span>
-          </div>
-          <div class="space-y-2 text-[12px]">
-            <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-ember"></span> <span class="font-medium">brand strategy</span> <span class="text-[#717286]">↔</span> <span class="font-medium">Q4 roadmap</span></div>
-            <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-ember"></span> <span class="font-medium">user research</span> <span class="text-[#717286]">→</span> <span class="font-medium">pricing page</span></div>
-            <div class="flex items-center gap-2 opacity-60"><span class="w-1.5 h-1.5 rounded-full bg-black/20"></span> <span>3 more links found…</span></div>
-          </div>
+          <div class="flex items-center justify-between mb-3"><span class="text-[11px] font-semibold tracking-widest uppercase text-[#717286]">Connections</span><span class="text-[11px] font-medium px-2 py-1 rounded-full bg-[#111] text-white">12 new</span></div>
+          <div class="space-y-2 text-[12px]"><div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-ember"></span> <span class="font-medium">gift ideas</span> <span class="text-[#717286]">↔</span> <span class="font-medium">weekend trip</span></div><div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-ember"></span> <span class="font-medium">recipes</span> <span class="text-[#717286]">→</span> <span class="font-medium">shopping</span></div><div class="flex items-center gap-2 opacity-60"><span class="w-1.5 h-1.5 rounded-full bg-black/20"></span> <span>3 more links found…</span></div></div>
         </div>
       </div>
-
-      <!-- Sage Card -->
       <div class="feature-card bg-sage">
         <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center mb-6 shadow-sm">⬢</div>
         <div class="eyebrow !text-[#3a475a] mb-3">03 • Ship</div>
-        <h3 class="font-louize text-[24px] leading-[1.1] tracking-[-0.02em] text-[#111] mb-3">From stray<br>to shipped.</h3>
-        <p class="text-[14px] leading-[1.6] text-[#3a475a] mb-6">
-          Select any cluster → turn it into a project, doc, or task board. Brain Dump keeps the source linked, so you never lose the why behind the what.
-        </p>
+        <h3 class="font-louize text-[24px] leading-[1.1] tracking-[-0.02em] mb-3">From stray<br>to shipped.</h3>
+        <p class="text-[14px] leading-[1.6] text-[#3a475a] mb-6">Select any cluster → turn it into a project, doc, or task board. Brain Dump keeps the source linked, so you never lose the why.</p>
         <div class="space-y-2">
-          <div class="bg-[#111] text-white rounded-[12px] px-4 py-3 flex items-center justify-between shadow-sm">
-            <div>
-              <div class="text-[12px] font-semibold">Website 0.2 — Launch</div>
-              <div class="text-[11px] text-white/60">6 notes → 1 project</div>
-            </div>
-            <span class="w-7 h-7 rounded-full bg-ember flex items-center justify-center text-white">→</span>
-          </div>
-          <div class="flex gap-2 text-[11px] font-medium">
-            <span class="px-2.5 py-1.5 rounded-full bg-white border border-black/5">Tasks</span>
-            <span class="px-2.5 py-1.5 rounded-full bg-white border border-black/5">Docs</span>
-            <span class="px-2.5 py-1.5 rounded-full bg-white border border-black/5">Timeline</span>
-          </div>
+          <div class="bg-[#111] text-white rounded-[12px] px-4 py-3 flex items-center justify-between shadow-sm"><div><div class="text-[12px] font-semibold">Weekend in Alps — Plan</div><div class="text-[11px] text-white/60">6 notes → 1 project</div></div><span class="w-7 h-7 rounded-full bg-ember flex items-center justify-center">→</span></div>
+          <div class="flex gap-2 text-[11px] font-medium"><span class="px-2.5 py-1.5 rounded-full bg-white border border-black/5">Tasks</span><span class="px-2.5 py-1.5 rounded-full bg-white border border-black/5">Docs</span><span class="px-2.5 py-1.5 rounded-full bg-white border border-black/5">Timeline</span></div>
         </div>
       </div>
     </div>
-
-    <!-- Bottom highlight -->
-    <div class="mt-10 md:mt-12 max-w-[1200px] mx-auto bg-[#f9fafc] rounded-[16px] border border-black/5 p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
-      <div class="flex items-center gap-4">
-        <div class="w-12 h-12 rounded-full bg-white border border-black/5 flex items-center justify-center shadow-sm">
-          <span class="w-2.5 h-2.5 rounded-full bg-ember animate-pulse"></span>
-        </div>
-        <div>
-          <div class="text-[14px] font-semibold">Private by design. Not AI slop.</div>
-          <div class="text-[13px] text-[#717286]">On-device indexing • End-to-end encrypted • Your data never trains our models</div>
-        </div>
-      </div>
+    <div class="mt-10 max-w-[1200px] mx-auto bg-[#f9fafc] rounded-[16px] border border-black/5 p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-4"><div class="w-12 h-12 rounded-full bg-white border border-black/5 flex items-center justify-center shadow-sm"><span class="w-2.5 h-2.5 rounded-full bg-ember animate-pulse"></span></div><div><div class="text-[14px] font-semibold">Private by design. Not AI slop.</div><div class="text-[13px] text-[#717286]">On-device indexing • End-to-end encrypted • Your data never trains models</div></div></div>
       <a href="#" class="pill-button px-6 py-2.5 text-[13px] font-semibold bg-white whitespace-nowrap">Read our manifesto →</a>
     </div>
   </div>
@@ -478,111 +230,88 @@ tailwind.config = {
     <div class="grid lg:grid-cols-[520px_1fr] gap-10 lg:gap-16 items-center max-w-[1200px] mx-auto">
       <div>
         <div class="eyebrow mb-4">• The Infinite Canvas</div>
-        <h2 class="font-louize text-[36px] md:text-[48px] leading-[0.95] tracking-[-0.035em] text-[#111]">
-          An infinite desk for<br>
-          <span class="font-louize-italic font-normal">finite attention.</span>
-        </h2>
-        <p class="mt-5 text-[15px] leading-[1.65] text-[#4a5465]">
-          Pan, zoom, and rearrange in 360°. No rigid hierarchy — place ideas around a thought like furniture in an open loft. Mind maps, stacks, and freeform clusters live together.
-        </p>
-
+        <h2 class="font-louize text-[36px] md:text-[48px] leading-[0.95] tracking-[-0.035em]">An infinite desk for<br><span class="font-louize-italic font-normal">finite attention.</span></h2>
+        <p class="mt-5 text-[15px] leading-[1.65] text-[#4a5465]">No rigid hierarchy — place ideas around a thought like furniture in an open loft. Mind maps, stacks, and freeform clusters live together. Built for the way your mind actually works.</p>
         <div class="mt-8 space-y-4">
-          <div class="flex gap-4">
-            <div class="w-8 h-8 rounded-full bg-slateBlue flex items-center justify-center shrink-0 mt-0.5">1</div>
-            <div>
-              <div class="text-[14px] font-semibold">Just dump. No taxonomy.</div>
-              <div class="text-[13.5px] leading-[1.5] text-[#4a5465]">We auto-tag by color, shape, and semantic link. You stay in flow; we handle the filing.</div>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-8 h-8 rounded-full bg-parchment flex items-center justify-center shrink-0 mt-0.5">2</div>
-            <div>
-              <div class="text-[14px] font-semibold">Pull the ember thread.</div>
-              <div class="text-[13.5px] leading-[1.5] text-[#4a5465]">Hover any node → see its lineage. Click → traverse your thinking history like a time machine.</div>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-8 h-8 rounded-full bg-sage flex items-center justify-center shrink-0 mt-0.5">3</div>
-            <div>
-              <div class="text-[14px] font-semibold">From canvas to calendar.</div>
-              <div class="text-[13.5px] leading-[1.5] text-[#4a5465]">Lasso a cluster → “Make project”. Tasks, deadlines, and docs inherit the original connections.</div>
-            </div>
-          </div>
+          <div class="flex gap-4"><div class="w-8 h-8 rounded-full bg-slateBlue flex items-center justify-center shrink-0 mt-0.5">1</div><div><div class="text-[14px] font-semibold">Just dump. No taxonomy.</div><div class="text-[13.5px] leading-[1.5] text-[#4a5465]">We auto-tag by color, shape, and semantic link. You stay in flow.</div></div></div>
+          <div class="flex gap-4"><div class="w-8 h-8 rounded-full bg-parchment flex items-center justify-center shrink-0 mt-0.5">2</div><div><div class="text-[14px] font-semibold">Pull the ember thread.</div><div class="text-[13.5px] leading-[1.5] text-[#4a5465]">Hover any node → see its lineage. Click → traverse your history.</div></div></div>
+          <div class="flex gap-4"><div class="w-8 h-8 rounded-full bg-sage flex items-center justify-center shrink-0 mt-0.5">3</div><div><div class="text-[14px] font-semibold">From canvas to calendar.</div><div class="text-[13.5px] leading-[1.5] text-[#4a5465]">Lasso a cluster → “Make project”. Tasks inherit connections.</div></div></div>
         </div>
-
-        <div class="mt-8 flex items-center gap-3">
-          <a href="#" class="pill-button-filled px-6 py-3 text-[14px] font-semibold inline-flex items-center gap-2">
-            Open interactive canvas
-            <span class="w-5 h-5 rounded-full bg-white/15 flex items-center justify-center text-xs">↗</span>
-          </a>
-          <span class="text-[13px] text-[#717286]">Try without signup</span>
-        </div>
+        <div class="mt-8 flex items-center gap-3"><a href="#" class="pill-button-filled px-6 py-3 text-[14px] font-semibold inline-flex items-center gap-2">Open interactive canvas <span class="w-5 h-5 rounded-full bg-white/15 flex items-center justify-center text-xs">↗</span></a><span class="text-[13px] text-[#717286]">Try without signup</span></div>
       </div>
-
-      <!-- Mini canvas preview -->
       <div class="relative">
         <div class="bg-white rounded-[16px] border border-black/5 shadow-[0_20px_60px_rgba(0,0,0,0.08)] overflow-hidden">
           <div class="h-[420px] bg-[#fcf9f7] canvas-grid relative p-6">
-            <!-- Mock clusters -->
-            <div class="absolute left-6 top-6 bg-white rounded-[12px] p-4 shadow-[0_4px_16px_rgba(0,0,0,0.06)] border border-black/5 w-[200px]">
-              <div class="text-[11px] font-bold tracking-widest uppercase text-[#717286] mb-2">Today</div>
-              <div class="space-y-2">
-                <div class="h-2.5 bg-[#111] rounded-full w-[85%]"></div>
-                <div class="h-2 bg-black/10 rounded-full w-[65%]"></div>
-                <div class="h-2 bg-black/10 rounded-full w-[78%]"></div>
-              </div>
-              <div class="mt-3 flex gap-1.5">
-                <span class="px-2 py-1 rounded-full bg-slateBlue text-[10px] font-semibold">#research</span>
-                <span class="px-2 py-1 rounded-full bg-parchment text-[10px] font-semibold">#writing</span>
-              </div>
-            </div>
-
-            <div class="absolute right-6 top-10 bg-parchment rounded-[12px] p-4 shadow-[0_4px_16px_rgba(0,0,0,0.06)] w-[180px] rotate-[0.8deg]">
-              <div class="text-[11px] font-bold tracking-widest uppercase text-[#717286] mb-2">Moodboard</div>
-              <div class="grid grid-cols-3 gap-1.5">
-                <div class="aspect-square rounded-[8px] bg-gradient-to-br from-orange-200 to-amber-100"></div>
-                <div class="aspect-square rounded-[8px] bg-gradient-to-br from-slate-200 to-slate-100"></div>
-                <div class="aspect-square rounded-[8px] bg-gradient-to-br from-green-100 to-emerald-50"></div>
-                <div class="aspect-square rounded-[8px] bg-gradient-to-br from-zinc-200 to-neutral-100 col-span-2"></div>
-                <div class="aspect-square rounded-[8px] bg-[#111]"></div>
-              </div>
-            </div>
-
-            <div class="absolute left-10 bottom-16 bg-sage rounded-[12px] p-4 shadow-[0_4px_16px_rgba(0,0,0,0.06)] w-[220px] -rotate-[0.6deg]">
-              <div class="flex items-center gap-2 mb-2">
-                <span class="w-6 h-6 rounded-full bg-white flex items-center justify-center text-[12px]">✓</span>
-                <span class="text-[12px] font-semibold">Project: Munich Launch</span>
-              </div>
-              <div class="space-y-1.5 text-[11px]">
-                <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full border border-black/10 flex items-center justify-center"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span></span> Book venue</div>
-                <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full border border-black/10"></span> Draft invite copy</div>
-                <div class="flex items-center gap-2 opacity-50"><span class="w-3 h-3 rounded-full border border-black/10"></span> Send to press list</div>
-              </div>
-            </div>
-
-            <div class="absolute right-10 bottom-6 bg-white rounded-[12px] px-3 py-2.5 shadow-[0_4px_16px_rgba(0,0,0,0.06)] border border-black/5 flex items-center gap-2.5">
-              <div class="w-8 h-8 rounded-full bg-ember flex items-center justify-center text-white text-[12px]">✦</div>
-              <div>
-                <div class="text-[12px] font-semibold leading-none">AI suggests: connect →</div>
-                <div class="text-[11px] text-[#717286]">“venue budget” ↔ “Q4 roadmap”</div>
-              </div>
-              <button class="ml-2 w-6 h-6 rounded-full bg-[#111] text-white flex items-center justify-center text-[10px]">＋</button>
-            </div>
-
-            <!-- Connection lines -->
-            <svg class="absolute inset-0 w-full h-full pointer-events-none" style="z-index:0">
-              <path d="M 160 90 C 260 90, 290 120, 300 80" stroke="#ff5924" stroke-width="1.2" fill="none" opacity="0.2" stroke-dasharray="5 5"/>
-              <path d="M 140 280 C 220 320, 280 300, 300 260" stroke="black" stroke-width="1" fill="none" opacity="0.06"/>
-            </svg>
+            <div class="absolute left-6 top-6 bg-white rounded-[12px] p-4 shadow-[0_4px_16px_rgba(0,0,0,0.06)] border border-black/5 w-[200px]"><div class="text-[11px] font-bold tracking-widest uppercase text-[#717286] mb-2">Today</div><div class="space-y-2"><div class="h-2.5 bg-[#111] rounded-full w-[85%]"></div><div class="h-2 bg-black/10 rounded-full w-[65%]"></div><div class="h-2 bg-black/10 rounded-full w-[78%]"></div></div><div class="mt-3 flex gap-1.5"><span class="px-2 py-1 rounded-full bg-slateBlue text-[10px] font-semibold">#ideas</span><span class="px-2 py-1 rounded-full bg-parchment text-[10px] font-semibold">#life</span></div></div>
+            <div class="absolute right-6 top-10 bg-parchment rounded-[12px] p-4 shadow-[0_4px_16px_rgba(0,0,0,0.06)] w-[180px] rotate-[0.8deg]"><div class="text-[11px] font-bold tracking-widest uppercase text-[#717286] mb-2">Moodboard</div><div class="grid grid-cols-3 gap-1.5"><div class="aspect-square rounded-[8px] bg-gradient-to-br from-orange-200 to-amber-100"></div><div class="aspect-square rounded-[8px] bg-gradient-to-br from-slate-200 to-slate-100"></div><div class="aspect-square rounded-[8px] bg-gradient-to-br from-green-100 to-emerald-50"></div><div class="aspect-square rounded-[8px] bg-gradient-to-br from-zinc-200 to-neutral-100 col-span-2"></div><div class="aspect-square rounded-[8px] bg-[#111]"></div></div></div>
+            <div class="absolute left-10 bottom-16 bg-sage rounded-[12px] p-4 shadow-[0_4px_16px_rgba(0,0,0,0.06)] w-[220px] -rotate-[0.6deg]"><div class="flex items-center gap-2 mb-2"><span class="w-6 h-6 rounded-full bg-white flex items-center justify-center text-[12px]">✓</span><span class="text-[12px] font-semibold">Weekend Trip</span></div><div class="space-y-1.5 text-[11px]"><div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full border border-black/10 flex items-center justify-center"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span></span> Book train</div><div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full border border-black/10"></span> Pack list</div><div class="flex items-center gap-2 opacity-50"><span class="w-3 h-3 rounded-full border border-black/10"></span> Share with friends</div></div></div>
+            <div class="absolute right-10 bottom-6 bg-white rounded-[12px] px-3 py-2.5 shadow-[0_4px_16px_rgba(0,0,0,0.06)] border border-black/5 flex items-center gap-2.5"><div class="w-8 h-8 rounded-full bg-ember flex items-center justify-center text-white text-[12px]">✦</div><div><div class="text-[12px] font-semibold leading-none">AI suggests: connect →</div><div class="text-[11px] text-[#717286]">“budget” ↔ “trip”</div></div><button class="ml-2 w-6 h-6 rounded-full bg-[#111] text-white flex items-center justify-center text-[10px]">＋</button></div>
+            <svg class="absolute inset-0 w-full h-full pointer-events-none"><path d="M 160 90 C 260 90, 290 120, 300 80" stroke="#ff5924" stroke-width="1.2" fill="none" opacity="0.2" stroke-dasharray="5 5"/><path d="M 140 280 C 220 320, 280 300, 300 260" stroke="black" stroke-width="1" fill="none" opacity="0.06"/></svg>
           </div>
-          <div class="h-[48px] bg-white border-t border-black/5 flex items-center justify-between px-4">
-            <span class="text-[12px] font-medium text-[#717286]">Freeform • Auto-layout off • 12 collaborators view-only</span>
-            <span class="w-8 h-8 rounded-full bg-ember text-white flex items-center justify-center">⤢</span>
-          </div>
+          <div class="h-[48px] bg-white border-t border-black/5 flex items-center justify-between px-4"><span class="text-[12px] font-medium text-[#717286]">Freeform • Auto-layout off • Everyone can use it</span><span class="w-8 h-8 rounded-full bg-ember text-white flex items-center justify-center">⤢</span></div>
         </div>
-
-        <!-- Caption -->
         <p class="mt-4 text-center text-[12px] text-[#717286]">Real Mindspace canvas — drag, link, and zoom. No fake UI.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="py-16 bg-white border-y border-black/5">
+  <div class="max-w-[1200px] mx-auto px-6 md:px-10">
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="rounded-[16px] bg-[#f9fafc] border border-black/5 p-6">
+        <div class="flex gap-1 text-ember mb-3">★★★★★</div>
+        <p class="text-[14px] leading-[1.6] text-[#3a475a]">“Finally a place for *everything* — recipes, thesis notes, holiday plans. I just dump and it finds the links.”</p>
+        <div class="mt-4 flex items-center gap-3"><div class="w-8 h-8 rounded-full bg-slateBlue flex items-center justify-center text-[12px] font-bold">L</div><div><div class="text-[13px] font-semibold">Lena, 24</div><div class="text-[11px] text-[#717286]">Student • Munich</div></div></div>
+      </div>
+      <div class="rounded-[16px] bg-parchment border border-black/5 p-6">
+        <div class="flex gap-1 text-ember mb-3">★★★★★</div>
+        <p class="text-[14px] leading-[1.6] text-[#3a475a]">“We replaced Notion + Milanote + Todoist. One canvas for thoughts, ideas, and projects — our team lives here now.”</p>
+        <div class="mt-4 flex items-center gap-3"><div class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-[12px] font-bold">M</div><div><div class="text-[13px] font-semibold">Marco</div><div class="text-[11px] text-[#717286]">Founder • Berlin</div></div></div>
+      </div>
+      <div class="rounded-[16px] bg-sage border border-black/5 p-6">
+        <div class="flex gap-1 text-ember mb-3">★★★★★</div>
+        <p class="text-[14px] leading-[1.6] text-[#3a475a]">“My grocery list became a meal plan, became a dinner party. That’s the magic — it connects for me.”</p>
+        <div class="mt-4 flex items-center gap-3"><div class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-[12px] font-bold">S</div><div><div class="text-[13px] font-semibold">Sarah</div><div class="text-[11px] text-[#717286]">Designer • Vienna</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="py-16 md:py-24 bg-[#f9fafc]">
+  <div class="max-w-[1200px] mx-auto px-6 md:px-10">
+    <div class="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-16 items-start">
+      <div>
+        <div class="eyebrow mb-4">• About Mindspace</div>
+        <h2 class="font-louize text-[36px] md:text-[48px] leading-[0.95] tracking-[-0.035em]">Built in Munich<br><span class="font-louize-italic font-normal text-[#717286]">for minds everywhere.</span></h2>
+        <p class="mt-5 text-[15px] leading-[1.7] text-[#4a5465]">Mindspace is an innovative tech startup from Munich. We built Brain Dump because our own thoughts were scattered across 7 apps. We wanted one quiet, private place — as warm as paper, as powerful as a graph — for everyone: parents, students, founders, artists.</p>
+        <p class="mt-4 text-[15px] leading-[1.7] text-[#4a5465]">No ads. No training on your data. Just a sunlit desk that thinks with you. Inspired by the calm of <a href="https://styles.refero.design/style/5bfe6c1d-1b15-4f8d-b0c9-677a33291c5d" class="underline decoration-ember/30 hover:decoration-ember">mymind</a>, rebuilt for visual connection.</p>
+        <div class="mt-8 grid grid-cols-3 gap-6 py-6 border-y border-black/5">
+          <div><div class="font-louize text-[28px] leading-none">2024</div><div class="text-[11px] font-bold tracking-widest uppercase text-[#717286] mt-1">Founded</div></div>
+          <div><div class="font-louize text-[28px] leading-none">12k+</div><div class="text-[11px] font-bold tracking-widest uppercase text-[#717286] mt-1">Daily dumps</div></div>
+          <div><div class="font-louize text-[28px] leading-none">100%</div><div class="text-[11px] font-bold tracking-widest uppercase text-[#717286] mt-1">Private</div></div>
+        </div>
+        <div class="mt-6 flex items-center gap-3 text-[13px] text-[#717286]"><span class="dot-ember"></span> GDPR compliant • Hosted in EU • Carbon neutral</div>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="bg-white rounded-[16px] border border-black/5 p-5 text-center">
+          <div class="w-16 h-16 rounded-full bg-slateBlue mx-auto flex items-center justify-center text-[20px] font-bold">A</div>
+          <div class="mt-3 text-[13px] font-semibold">Anna</div><div class="text-[11px] text-[#717286]">Co-founder, Design</div><div class="mt-2 text-[11px] leading-[1.5] text-[#4a5465]">Ex-mymind, loves paper & pixels.</div>
+        </div>
+        <div class="bg-parchment rounded-[16px] border border-black/5 p-5 text-center mt-6">
+          <div class="w-16 h-16 rounded-full bg-white mx-auto flex items-center justify-center text-[20px] font-bold">J</div>
+          <div class="mt-3 text-[13px] font-semibold">Jonas</div><div class="text-[11px] text-[#717286]">Co-founder, Eng</div><div class="mt-2 text-[11px] leading-[1.5] text-[#4a5465]">Built graph infra, hates folders.</div>
+        </div>
+        <div class="bg-sage rounded-[16px] border border-black/5 p-5 text-center -mt-6">
+          <div class="w-16 h-16 rounded-full bg-white mx-auto flex items-center justify-center text-[20px] font-bold">S</div>
+          <div class="mt-3 text-[13px] font-semibold">Sofia</div><div class="text-[11px] text-[#717286]">Product</div><div class="mt-2 text-[11px] leading-[1.5] text-[#4a5465]">Turns mess into maps.</div>
+        </div>
+        <div class="bg-white rounded-[16px] border border-black/5 p-5 text-center">
+          <div class="w-16 h-16 rounded-full bg-[#fff1f1] mx-auto flex items-center justify-center text-[20px]">✦</div>
+          <div class="mt-3 text-[13px] font-semibold">You?</div><div class="text-[11px] text-[#717286]">We’re hiring</div><a href="#" class="mt-2 inline-flex text-[11px] font-semibold text-ember hover:underline">Join us →</a>
+        </div>
       </div>
     </div>
   </div>
@@ -592,161 +321,120 @@ tailwind.config = {
 <section id="pricing" class="py-16 md:py-24 bg-white">
   <div class="max-w-[1200px] mx-auto px-6 md:px-10">
     <div class="text-center max-w-[640px] mx-auto mb-10">
-      <div class="eyebrow justify-center flex mb-4">• Pricing</div>
+      <div class="eyebrow justify-center flex mb-4">• Pricing • For everyone</div>
       <h2 class="font-louize text-[36px] md:text-[48px] leading-[0.95] tracking-[-0.035em]">Start free. <span class="font-louize-italic font-normal text-[#717286]">Stay private.</span></h2>
-      <p class="mt-4 text-[15px] leading-[1.6] text-[#4a5465]">No ads, no training on your data. Just a quiet place to think out loud.</p>
+      <p class="mt-4 text-[15px] leading-[1.6] text-[#4a5465]">One simple plan for personal use, free forever. Upgrade only if you need more canvases.</p>
     </div>
-
     <div class="grid md:grid-cols-3 gap-5 max-w-[1000px] mx-auto">
       <div class="rounded-[16px] border border-black/5 p-7 bg-[#f9fafc]">
         <div class="text-[12px] font-bold tracking-widest uppercase text-[#717286]">Personal</div>
         <div class="mt-3 flex items-baseline gap-1"><span class="font-louize text-[32px] leading-none">€0</span><span class="text-[13px] text-[#717286]">/ forever</span></div>
-        <p class="mt-2 text-[13px] text-[#4a5465]">For solo thinkers.</p>
-        <ul class="mt-6 space-y-2.5 text-[13px] leading-[1.5]">
-          <li class="flex gap-2"><span class="text-emerald-500">✓</span> Unlimited brain dumps</li>
-          <li class="flex gap-2"><span class="text-emerald-500">✓</span> 3 canvases • Visual links</li>
-          <li class="flex gap-2"><span class="text-emerald-500">✓</span> Private, on-device search</li>
-        </ul>
+        <p class="mt-2 text-[13px] text-[#4a5465]">For everyone — lists, notes, ideas.</p>
+        <ul class="mt-6 space-y-2.5 text-[13px] leading-[1.5]"><li class="flex gap-2"><span class="text-emerald-500">✓</span> Unlimited brain dumps</li><li class="flex gap-2"><span class="text-emerald-500">✓</span> 3 canvases • Visual links</li><li class="flex gap-2"><span class="text-emerald-500">✓</span> Private, on-device search</li></ul>
         <a href="#" class="mt-7 pill-button w-full justify-center py-3 text-[13px] font-semibold bg-white flex">Start for free</a>
       </div>
-
       <div class="rounded-[16px] bg-[#111] text-white p-7 relative overflow-hidden">
         <div class="absolute -top-10 -right-10 w-40 h-40 bg-ember/20 blur-3xl rounded-full"></div>
         <div class="text-[12px] font-bold tracking-widest uppercase text-white/50">Creator <span class="ml-2 px-2 py-1 rounded-full bg-ember text-white text-[10px]">POPULAR</span></div>
         <div class="mt-3 flex items-baseline gap-1"><span class="font-louize text-[32px] leading-none">€12</span><span class="text-[13px] text-white/60">/ month</span></div>
         <p class="mt-2 text-[13px] text-white/60">For builders who ship.</p>
-        <ul class="mt-6 space-y-2.5 text-[13px] leading-[1.5] text-white/85">
-          <li class="flex gap-2"><span class="text-ember">✓</span> Unlimited canvases & projects</li>
-          <li class="flex gap-2"><span class="text-ember">✓</span> AI auto-link + semantic search</li>
-          <li class="flex gap-2"><span class="text-ember">✓</span> Turn clusters → tasks/docs</li>
-          <li class="flex gap-2"><span class="text-ember">✓</span> iCloud & Web sync, 1TB</li>
-        </ul>
+        <ul class="mt-6 space-y-2.5 text-[13px] leading-[1.5] text-white/85"><li class="flex gap-2"><span class="text-ember">✓</span> Unlimited canvases & projects</li><li class="flex gap-2"><span class="text-ember">✓</span> AI auto-link + semantic search</li><li class="flex gap-2"><span class="text-ember">✓</span> Turn clusters → tasks/docs</li><li class="flex gap-2"><span class="text-ember">✓</span> iCloud & Web sync</li></ul>
         <a href="#" class="mt-7 w-full justify-center py-3 text-[13px] font-semibold bg-white text-ink rounded-full flex hover:bg-[#f3f0e7] transition-colors">Start Brain Dumping →</a>
         <p class="mt-3 text-center text-[11px] text-white/40">14-day trial • Cancel anytime</p>
       </div>
-
       <div class="rounded-[16px] border border-black/5 p-7 bg-white">
         <div class="text-[12px] font-bold tracking-widest uppercase text-[#717286]">Team</div>
         <div class="mt-3 flex items-baseline gap-1"><span class="font-louize text-[32px] leading-none">€28</span><span class="text-[13px] text-[#717286]">/ month</span></div>
-        <p class="mt-2 text-[13px] text-[#4a5465]">For studios & labs.</p>
-        <ul class="mt-6 space-y-2.5 text-[13px] leading-[1.5]">
-          <li class="flex gap-2"><span class="text-emerald-500">✓</span> Shared canvases, live cursors</li>
-          <li class="flex gap-2"><span class="text-emerald-500">✓</span> Private team graph</li>
-          <li class="flex gap-2"><span class="text-emerald-500">✓</span> SSO & advanced permissions</li>
-        </ul>
+        <p class="mt-2 text-[13px] text-[#4a5465]">For studios & families.</p>
+        <ul class="mt-6 space-y-2.5 text-[13px] leading-[1.5]"><li class="flex gap-2"><span class="text-emerald-500">✓</span> Shared canvases, live cursors</li><li class="flex gap-2"><span class="text-emerald-500">✓</span> Private team graph</li><li class="flex gap-2"><span class="text-emerald-500">✓</span> SSO & permissions</li></ul>
         <a href="#" class="mt-7 pill-button w-full justify-center py-3 text-[13px] font-semibold bg-white flex">Talk to us</a>
       </div>
     </div>
   </div>
 </section>
 
+<!-- FAQ -->
+<section id="faq" class="py-16 md:py-24 bg-[#f9fafc]">
+  <div class="max-w-[900px] mx-auto px-6 md:px-10">
+    <div class="text-center mb-10">
+      <div class="eyebrow justify-center flex mb-4">• FAQ</div>
+      <h2 class="font-louize text-[36px] md:text-[44px] leading-[0.95] tracking-[-0.035em]">Questions, <span class="font-louize-italic font-normal text-[#717286]">dumped & answered.</span></h2>
+    </div>
+    <div class="space-y-3">
+      <details class="group bg-white rounded-[16px] border border-black/5 p-6 open:shadow-[0_8px_24px_rgba(0,0,0,0.04)] transition-all">
+        <summary class="flex items-center justify-between cursor-pointer list-none">
+          <span class="font-semibold text-[15px] pr-6">Is Brain Dump really for everyone? I’m not a “visual thinker”.</span>
+          <span class="faq-icon w-8 h-8 rounded-full bg-[#f9fafc] border border-black/5 flex items-center justify-center shrink-0 transition-transform text-ember text-[18px] leading-none">+</span>
+        </summary>
+        <p class="mt-4 text-[14px] leading-[1.6] text-[#4a5465]">Yes. Most users start with simple lists — groceries, birthdays, article links. The canvas only appears when you want it. We auto-color and link in the background, so you benefit without having to “mind map”.</p>
+      </details>
+      <details class="group bg-white rounded-[16px] border border-black/5 p-6">
+        <summary class="flex items-center justify-between cursor-pointer list-none"><span class="font-semibold text-[15px] pr-6">How is this different from mymind / Notion / Obsidian?</span><span class="faq-icon w-8 h-8 rounded-full bg-[#f9fafc] border border-black/5 flex items-center justify-center shrink-0 transition-transform text-ember text-[18px]">+</span></summary>
+        <p class="mt-4 text-[14px] leading-[1.6] text-[#4a5465]">mymind archives beautifully, Notion organizes databases, Obsidian links notes — but none give you an infinite visual canvas *plus* auto-organization. Brain Dump is the desk, not the filing cabinet.</p>
+      </details>
+      <details class="group bg-white rounded-[16px] border border-black/5 p-6">
+        <summary class="flex items-center justify-between cursor-pointer list-none"><span class="font-semibold text-[15px] pr-6">Is my data private? Do you train AI on it?</span><span class="faq-icon w-8 h-8 rounded-full bg-[#f9fafc] border border-black/5 flex items-center justify-center shrink-0 transition-transform text-ember text-[18px]">+</span></summary>
+        <p class="mt-4 text-[14px] leading-[1.6] text-[#4a5465]">Private by design. On-device indexing, end-to-end encryption, EU hosting (Frankfurt). We never train models on your dumps. Your thoughts stay yours — period.</p>
+      </details>
+      <details class="group bg-white rounded-[16px] border border-black/5 p-6">
+        <summary class="flex items-center justify-between cursor-pointer list-none"><span class="font-semibold text-[15px] pr-6">What can I dump? Any format?</span><span class="faq-icon w-8 h-8 rounded-full bg-[#f9fafc] border border-black/5 flex items-center justify-center shrink-0 transition-transform text-ember text-[18px]">+</span></summary>
+        <p class="mt-4 text-[14px] leading-[1.6] text-[#4a5465]">Text, links, images, PDFs, voice notes, bookmarks — even handwritten photos (OCR). One global shortcut ⌘J. We detect type, extract text, and color-code: sage for projects, slate blue for ideas, parchment for inspiration.</p>
+      </details>
+      <details class="group bg-white rounded-[16px] border border-black/5 p-6">
+        <summary class="flex items-center justify-between cursor-pointer list-none"><span class="font-semibold text-[15px] pr-6">Do I need to organize anything manually?</span><span class="faq-icon w-8 h-8 rounded-full bg-[#f9fafc] border border-black/5 flex items-center justify-center shrink-0 transition-transform text-ember text-[18px]">+</span></summary>
+        <p class="mt-4 text-[14px] leading-[1.6] text-[#4a5465]">No. That’s the point: *Remember everything. Organize nothing.* Drag to connect if you want, but auto-links and color already cluster related dumps. Manual is optional, magic is automatic.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
 <!-- CTA -->
-<section id="cta" class="py-16 md:py-20">
+<section id="cta" class="py-16 md:py-20 bg-white">
   <div class="max-w-[1200px] mx-auto px-6 md:px-10">
     <div class="rounded-[24px] bg-[#111] text-white p-8 md:p-12 lg:p-16 relative overflow-hidden">
       <div class="absolute inset-0 bg-[radial-gradient(ellipse_600px_300px_at_70%_0%,rgba(255,89,36,0.18),transparent_60%)]"></div>
-      <div class="absolute inset-0 bg-[radial-gradient(ellipse_500px_400px_at_0%_100%,rgba(255,255,255,0.04),transparent_60%)]"></div>
       <div class="relative grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-center">
         <div>
           <div class="eyebrow !text-ember mb-4">• Ready to think clearly?</div>
-          <h2 class="font-louize text-[36px] md:text-[52px] leading-[0.92] tracking-[-0.04em]">
-            Your next idea is<br>
-            <span class="font-louize-italic font-normal text-[#ff5924]">already in your head.</span>
-          </h2>
-          <p class="mt-4 text-[15px] leading-[1.6] text-white/60 max-w-[520px]">
-            Join 12,000+ founders, writers, and researchers who dump, connect, and ship with Mindspace. Free forever for personal use.
-          </p>
+          <h2 class="font-louize text-[36px] md:text-[52px] leading-[0.92] tracking-[-0.04em]">Your next idea is<br><span class="font-louize-italic font-normal text-[#ff5924]">already in your head.</span></h2>
+          <p class="mt-4 text-[15px] leading-[1.6] text-white/60 max-w-[520px]">Join 12,000+ everyday thinkers who dump, connect, and ship with Mindspace. Free forever for personal use — whether it’s a shopping list or a startup.</p>
           <div class="mt-8 flex flex-col sm:flex-row gap-3">
-            <a href="#" class="px-7 py-3.5 rounded-full bg-white text-ink text-[14px] font-semibold inline-flex items-center justify-center gap-2 hover:bg-[#f3f0e7] transition-colors">
-              <span class="w-2 h-2 rounded-full bg-ember"></span>
-              Start Brain Dumping — free
-            </a>
-            <a href="#" class="px-7 py-3.5 rounded-full border border-white/15 text-white text-[14px] font-medium inline-flex items-center justify-center gap-2 hover:bg-white/5 transition-colors">
-              Book a 15-min demo
-            </a>
+            <a href="#" class="px-7 py-3.5 rounded-full bg-white text-ink text-[14px] font-semibold inline-flex items-center justify-center gap-2 hover:bg-[#f3f0e7] transition-colors"><span class="w-2 h-2 rounded-full bg-ember"></span> Start Brain Dumping — free</a>
+            <a href="#" class="px-7 py-3.5 rounded-full border border-white/15 text-white text-[14px] font-medium inline-flex items-center justify-center gap-2 hover:bg-white/5 transition-colors">Book a 15-min demo</a>
           </div>
-          <p class="mt-3 text-[12px] text-white/30">No credit card • GDPR compliant • Made in Munich</p>
+          <p class="mt-3 text-[12px] text-white/30">No credit card • GDPR • Made in Munich with love</p>
         </div>
-
         <div class="bg-white rounded-[16px] p-6 text-ink shadow-[0_24px_48px_rgba(0,0,0,0.3)]">
-          <div class="flex items-center gap-2 mb-4">
-            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-            <span class="text-[12px] font-semibold">What people dump</span>
-            <span class="ml-auto text-[11px] px-2 py-1 rounded-full bg-[#f9fafc] border border-black/5">Live feed • anonymized</span>
-          </div>
+          <div class="flex items-center gap-2 mb-4"><span class="w-2 h-2 rounded-full bg-emerald-500"></span><span class="text-[12px] font-semibold">What people dump</span><span class="ml-auto text-[11px] px-2 py-1 rounded-full bg-[#f9fafc] border border-black/5">Live • anonymized</span></div>
           <div class="space-y-2.5 text-[13px]">
-            <div class="flex items-center gap-3 p-3 rounded-[12px] bg-slateBlue border border-black/5">
-              <span class="w-8 h-8 rounded-full bg-white flex items-center justify-center shrink-0">💭</span>
-              <span class="font-medium">“Why does onboarding feel heavy?”</span>
-              <span class="ml-auto text-[11px] px-2 py-1 rounded-full bg-white">thought</span>
-            </div>
-            <div class="flex items-center gap-3 p-3 rounded-[12px] bg-parchment border border-black/5">
-              <span class="w-8 h-8 rounded-full bg-white flex items-center justify-center shrink-0">📎</span>
-              <span class="font-medium">competitor teardown — 12 links</span>
-              <span class="ml-auto text-[11px] px-2 py-1 rounded-full bg-white">research</span>
-            </div>
-            <div class="flex items-center gap-3 p-3 rounded-[12px] bg-sage border border-black/5">
-              <span class="w-8 h-8 rounded-full bg-white flex items-center justify-center shrink-0">✓</span>
-              <span class="font-medium">Website 0.2 tasks → shipped</span>
-              <span class="ml-auto w-2 h-2 rounded-full bg-emerald-500"></span>
-            </div>
+            <div class="flex items-center gap-3 p-3 rounded-[12px] bg-slateBlue border border-black/5"><span class="w-8 h-8 rounded-full bg-white flex items-center justify-center">💭</span><span class="font-medium">“Gift for Papa — vinyl?”</span><span class="ml-auto text-[11px] px-2 py-1 rounded-full bg-white">thought</span></div>
+            <div class="flex items-center gap-3 p-3 rounded-[12px] bg-parchment border border-black/5"><span class="w-8 h-8 rounded-full bg-white flex items-center justify-center">📎</span><span class="font-medium">Apartment hunt — 8 links</span><span class="ml-auto text-[11px] px-2 py-1 rounded-full bg-white">project</span></div>
+            <div class="flex items-center gap-3 p-3 rounded-[12px] bg-sage border border-black/5"><span class="w-8 h-8 rounded-full bg-white flex items-center justify-center">✓</span><span class="font-medium">Bake banana bread ✓</span><span class="ml-auto w-2 h-2 rounded-full bg-emerald-500"></span></div>
           </div>
-          <div class="mt-4 flex items-center gap-2 text-[11px] text-[#717286]">
-            <span class="w-1 h-1 rounded-full bg-black/20"></span> Encrypted at rest • Search is local-first
-          </div>
+          <div class="mt-4 flex items-center gap-2 text-[11px] text-[#717286]"><span class="w-1 h-1 rounded-full bg-black/20"></span> Encrypted • Search is local-first</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Footer -->
 <footer class="py-10 border-t border-black/5 bg-white">
   <div class="max-w-[1440px] mx-auto px-6 md:px-10">
     <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-      <div class="flex items-center gap-6">
-        <a href="#" class="flex items-center gap-2.5">
-          <span class="w-7 h-7 rounded-full bg-[#111] flex items-center justify-center"><span class="w-2 h-2 rounded-full bg-ember"></span></span>
-          <span class="font-semibold text-[14px]">Mindspace</span>
-          <span class="text-[12px] text-[#717286] ml-2 hidden sm:inline">© 2026 Mindspace GmbH • Munich</span>
-        </a>
-      </div>
-      <div class="flex flex-wrap items-center gap-5 text-[12px] font-medium text-[#717286]">
-        <a href="#" class="hover:text-ink">Manifesto</a>
-        <a href="#" class="hover:text-ink">Privacy</a>
-        <a href="#" class="hover:text-ink">Security</a>
-        <a href="#" class="hover:text-ink">Changelog</a>
-        <a href="#" class="hover:text-ink flex items-center gap-1.5"><span class="dot-ember"></span>mymind-inspired • built with care</a>
-      </div>
+      <a href="#" class="flex items-center gap-2.5"><span class="w-7 h-7 rounded-full bg-[#111] flex items-center justify-center"><span class="w-2 h-2 rounded-full bg-ember"></span></span><span class="font-semibold text-[14px]">Mindspace</span><span class="text-[12px] text-[#717286] ml-2 hidden sm:inline">© 2026 Mindspace GmbH • Munich</span></a>
+      <div class="flex flex-wrap items-center gap-5 text-[12px] font-medium text-[#717286]"><a href="#" class="hover:text-ink">Manifesto</a><a href="#" class="hover:text-ink">Privacy</a><a href="#" class="hover:text-ink">Security</a><a href="#" class="hover:text-ink">Changelog</a><span class="flex items-center gap-1.5"><span class="dot-ember"></span> mymind-inspired</span></div>
     </div>
     <div class="mt-6 pt-6 border-t border-black/5 flex flex-col md:flex-row gap-3 justify-between text-[11px] leading-[1.5] text-[#afb5c1]">
-      <p>Design system: mymind — Sunlit personal archive • Louize 96–140px • Nunito tracked labels • Ember #ff5924 • Pastel cards • 100px pills • 16px cards. No purple gradients.</p>
-      <p>Refero Style: <a href="https://styles.refero.design/style/5bfe6c1d-1b15-4f8d-b0c9-677a33291c5d" class="underline hover:text-[#717286]">mymind design system</a></p>
+      <p>Design system: mymind — Sunlit personal archive • Louize 96–140px • Nunito 0.125em • Ember #ff5924 • Pastel cards • 100px pills • 16px cards. Marketing landing for everyone, warm minimal.</p>
+      <p>Refero: <a href="https://styles.refero.design/style/5bfe6c1d-1b15-4f8d-b0c9-677a33291c5d" class="underline hover:text-[#717286]">mymind design system</a></p>
     </div>
   </div>
 </footer>
 
 <script>
-  // Smooth scroll
-  document.querySelectorAll('a[href^="#"]').forEach(a=>{
-    a.addEventListener('click', e=>{
-      const id=a.getAttribute('href');
-      if(id.length>1){
-        const el=document.querySelector(id);
-        if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'})}
-      }
-    })
-  })
-  // Subtle parallax on hero nodes
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const id=a.getAttribute('href');if(id.length>1){const el=document.querySelector(id);if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth',block:'start'})}}})})
   const nodes=document.querySelectorAll('.node');
-  document.addEventListener('mousemove', e=>{
-    const x=(e.clientX/window.innerWidth -0.5)*10;
-    const y=(e.clientY/window.innerHeight -0.5)*10;
-    nodes.forEach((n,i)=>{
-      const factor=0.3 + i*0.08;
-      n.style.transform=`translate(${x*factor}px, ${y*factor}px)`;
-    })
-  })
+  document.addEventListener('mousemove',e=>{const x=(e.clientX/window.innerWidth-0.5)*10;const y=(e.clientY/window.innerHeight-0.5)*10;nodes.forEach((n,i)=>{const f=0.3+i*0.08;n.style.transform=`translate(${x*f}px, ${y*f}px)`})})
 </script>
 </body>
 </html>
