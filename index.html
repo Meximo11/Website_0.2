@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mindspace — Brain Dump. Your mind, visualized.</title>
 <link rel="stylesheet" href="./assets/tailwind.css">
+<script src="./assets/vendor/motion.js"></script>
 
 
 <style>
@@ -526,6 +527,37 @@ let focusedNode = null
   })
 })
 
+
+// ===== MOTION ANIMATIONS (ui-ux-pro-max + mymind warm) =====
+if (typeof Motion !== 'undefined' && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const { animate, inView, stagger } = Motion
+  // Hero headline stagger
+  const heroTitle = document.querySelector('h1')
+  if (heroTitle) {
+    const lines = heroTitle.innerHTML.split('<br>')
+    // simple fade up
+    animate(heroTitle, { opacity: [0,1], y: [12,0] }, { duration: 0.6, easing: [0.22,1,0.36,1] })
+  }
+  // Feature cards stagger on scroll
+  const cards = document.querySelectorAll('.feature-card')
+  if (cards.length) {
+    cards.forEach(c=>{ c.style.opacity='0'; c.style.transform='translateY(12px)' })
+    inView('.feature-card', ({target})=>{
+      animate(target, { opacity: [0,1], y: [12,0] }, { duration: 0.5, delay: stagger(0.12), easing: 'easeOut' })
+    }, { amount: 0.2 })
+  }
+  // Canvas nodes entrance
+  const nodes = document.querySelectorAll('.draggable, .center-node')
+  nodes.forEach((n,i)=>{
+    n.style.opacity='0'
+    setTimeout(()=> animate(n, { opacity:[0,1], scale:[0.96,1] }, { duration:0.45, delay: i*0.06, easing: 'easeOut' }), 300)
+  })
+  // Hover micro-interactions for pill buttons (subtle, 200ms)
+  document.querySelectorAll('.pill-button, .pill-button-filled').forEach(btn=>{
+    btn.addEventListener('mouseenter', ()=> animate(btn, { scale: 1.02 }, { duration: 0.2 }))
+    btn.addEventListener('mouseleave', ()=> animate(btn, { scale: 1 }, { duration: 0.2 }))
+  })
+}
 </script>
 <div id="a11y-live" aria-live="polite" aria-atomic="true" class="sr-only" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;"></div>
 </body>

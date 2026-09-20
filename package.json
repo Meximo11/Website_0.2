@@ -8,14 +8,15 @@
     "dev": "python3 -m http.server 5173"
   },
   "devDependencies": {
-    "tailwindcss": "^3.4.10",
     "autoprefixer": "^10.4.20",
-    "postcss": "^8.4.40"
+    "postcss": "^8.4.40",
+    "tailwindcss": "^3.4.10"
   },
   "dependencies": {
     "@fontsource/instrument-serif": "^5.0.8",
     "@fontsource/inter": "^5.0.16",
     "@fontsource/nunito-sans": "^5.0.12",
-    "@fontsource/playfair-display": "^5.0.8"
+    "@fontsource/playfair-display": "^5.0.8",
+    "motion": "^13.4.0"
   }
 }
