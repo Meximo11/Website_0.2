@@ -1,0 +1,21 @@
+{
+  "name": "mindspace-website",
+  "private": true,
+  "version": "0.2.0",
+  "type": "module",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/input.css -o ./assets/tailwind.css --minify",
+    "dev": "python3 -m http.server 5173"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.10",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.40"
+  },
+  "dependencies": {
+    "@fontsource/instrument-serif": "^5.0.8",
+    "@fontsource/inter": "^5.0.16",
+    "@fontsource/nunito-sans": "^5.0.12",
+    "@fontsource/playfair-display": "^5.0.8"
+  }
+}
